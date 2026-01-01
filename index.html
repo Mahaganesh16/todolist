@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do app</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="card">
+        <div class="card-details">
+    <h2>to do list</h2>
+    <ul id="todoList">
+
+    </ul>
+    <input type="text" id="addList">
+    <button id="submit">ADD</button>
+    <h3>completed</h3>
+    <ul id="doneList">
+
+    </ul>
+    </div>
+    </div>
+</body>
+<script>
+    let todoList = document.getElementById('todoList');
+    let addList = document.getElementById('addList');
+    let submit = document.getElementById('submit');
+    let doneList = document.getElementById('doneList');
+
+    let list = new Array();
+
+    submit.addEventListener('click',(event) =>{
+        if(addList.value!= ''){
+            list.push(addList.value);
+        todoList.innerHTML += '<li id="'+(list.length-1)+'"><button onclick="complete('+(list.length-1)+')">'+addList.value+'</button></li>';
+        addList.value = '';
+        }
+        
+    });
+
+    function complete(id){
+        doneList.innerHTML += '<li>'+list[id]+'</li>';
+        document.getElementById(id).style.display = "none";
+    }
+
+
+</script>
+</html>

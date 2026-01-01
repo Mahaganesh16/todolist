@@ -1,0 +1,95 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+h2, h3 {
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Container Styling */
+ul {
+    list-style: none;
+    padding: 0;
+    width: 300px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Input and Button Styling */
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    width: 220px;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #5cb85c;
+}
+
+#submit {
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#submit:hover {
+    background-color: #4cae4c;
+}
+
+/* Task Buttons */
+#todoList button {
+    width: 100%;
+    text-align: left;
+    padding: 12px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-left: 5px solid red;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+#todoList button:hover {
+    background-color: #f9f9f9;
+    transform: translateX(5px);
+}
+
+/* Completed List Styling */
+#doneList li {
+    background-color: green;
+    color: black;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 350px;
+    background: blueviolet;
+    border-radius: 10px;
+
+}
+
+.card-details{
+    margin: 10px;
+    
+}
